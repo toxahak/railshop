@@ -6,7 +6,7 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    get :index
+    get :'1index'
     assert_response :success
     assert_not_nil assigns(:products)
   end

@@ -1,0 +1,17 @@
+p.notice
+  - notice
+
+h1
+  'Listing Products
+
+- @products.each do |product|
+  .product_item.clearfix
+    =image_tag(product.image_url, class: 'image')
+    .title =product.title
+    .description =product.description
+    .price =product.price
+
+    .actions
+      = link_to 'Show', product, class: 'btn'
+      = link_to 'Edit', edit_product_path(product), class: 'btn'
+      = link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete, class: 'btn'
