@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.delete_all
+
+55.times do
+  Product.create( title: Faker::Lorem.sentence(5),
+                  description: Faker::Lorem.paragraph,
+                  image_url: 'http://thecatapi.com/api/images/get?format=src&size=small&type=png&i='+rand(100..200).to_s,
+                  price: rand(1..5000) / 100.0)
+end
