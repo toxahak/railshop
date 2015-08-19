@@ -7,7 +7,7 @@ p
   =@product.description
 p
   strong> Price
-  =@product.price
+  =number_to_currency @product.price
 
 
 = link_to 'Back', products_path
