@@ -1,15 +1,14 @@
 p.notice
   - notice
 
-h1
-  'Listing Products
+h1 Listing Products
 
 - @products.each do |product|
   .product_item.clearfix
     =image_tag(product.image_url, class: 'image')
     .title =product.title
     .description =product.description
-    .price =product.price
+    .price =number_to_currency product.price
 
     .actions
       = link_to 'Show', product, class: 'btn'

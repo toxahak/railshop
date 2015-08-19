@@ -6,7 +6,7 @@
     width: 400px;
     float: left;
     .image {
-      height: 100px;
+      height: 130px;
       float: left;
       margin: 0 10px 10px 0;
     }
@@ -17,6 +17,10 @@
       font-weight: bold;
       font-size: 14pt;
       color: blue;
+    }
+    .description {
+      max-height: 60px;
+      overflow: hidden;
     }
     .actions {
       clear: left;

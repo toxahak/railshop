@@ -1,0 +1,13 @@
+=image_tag(@product.image_url, class: 'image')
+p
+  strong> Title
+  =@product.title
+p
+  strong> Description
+  =@product.description
+p
+  strong> Price
+  =number_to_currency @product.price
+
+
+= link_to 'Back', products_path
